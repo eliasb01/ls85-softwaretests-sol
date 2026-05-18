@@ -83,11 +83,11 @@ if __name__ == "__main__":
 
 # Prinzip 2 – Vollständiges Testen ist unmöglich:
 # Beispiel aus dem Berufsalltag:
-# TODO: Deine Antwort hier
+# Eine Seite oder ein Programm wird mit einem Browser geöffnet und kann nicht richtig geladen werden.
 
 # Prinzip 4 – Defect Clustering:
 # Beispiel aus dem Berufsalltag:
-# TODO: Deine Antwort hier
+# Stellen mit komplexen Vorgängen (z.B. im ERP-System Eingaben prüfen, ob sie logisch möglich sind) enthalten wahrscheinlich mehrere Fehler als eine lange Stelle in der nur die UI definiert wird.
 
 # Welches Prinzip überrascht dich? Warum?
-# TODO: Deine Antwort hier
+# Dass so eine große Mehrheit aller Fehler in so einem kleinem Bereich ist. Ich bin davon ausgegangen, dass man bei leichteren Passagen weniger aufpasst und diese schnell fertig haben will und sich deswegen dort auch Fehler einschleichen können. Bei komplizierten Passagen macht man sich mehr Gedanken und vermeidet so Fehler.
