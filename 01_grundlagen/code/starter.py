@@ -23,13 +23,13 @@ def berechne_rabatt(preis: float, prozent: float) -> float:
 # Aufgabe 1a): Beantworte folgende Fragen als Kommentar:
 
 # Error (falsche Handlung des Entwicklers):
-# TODO: Deine Antwort hier
+# TODO: Die Formel zur Berechnung der Variable rabatt ist falsch, die Prozentzahl muss durch 100 geteilt werden
 
 # Defect (fehlerhafte Stelle im Code):
-# TODO: Deine Antwort hier
+# TODO: Die Prozentzahl muss beim Berechnen der Variable rabatt durch 100 geteilt werden
 
 # Failure (was der Benutzer bemerken würde):
-# TODO: Deine Antwort hier
+# TODO: Der Preis würde immer negativ sein, weil bei dieser Formel rabatt immer größer ist als preis
 
 
 # Aufgabe 1b): Korrigiere die Funktion unten und füge print()-Tests hinzu.
@@ -39,7 +39,8 @@ def berechne_rabatt_korrigiert(preis: float, prozent: float) -> float:
     Korrigierte Version von berechne_rabatt().
     TODO: Implementiere die korrekte Logik.
     """
-    pass  # TODO: Ersetze 'pass' durch deine Implementierung
+    rabatt = preis * (prozent/100)
+    return preis - rabatt
 
 
 # Manuelle Tests (werden in Baustein 05 durch echte Unit-Tests ersetzt)
@@ -51,7 +52,10 @@ if __name__ == "__main__":
     print(berechne_rabatt(100.0, 20))  # Falsche Ausgabe erwartet
 
     print("\n=== Test: berechne_rabatt_korrigiert ===")
-    # TODO: Deine Tests hier
+    print(berechne_rabatt_korrigiert(100.0,20))
+    print(berechne_rabatt_korrigiert(100.0,50))
+    print(berechne_rabatt_korrigiert(300,50))
+    print(berechne_rabatt_korrigiert(1,1))
 
 
 # ============================================================
