@@ -5,6 +5,13 @@ Startvorlage – bearbeite diese Datei für deine Aufgaben.
 
 from typing import List, Dict
 
+#Aufgabe 2
+#| Beschreibung | Teststufe |
+#|-------------|-----------|
+#| Testet einzelne Funktionen oder Methoden isoliert |Unit-Test|
+#| Prüft das Zusammenspiel mehrerer Module |Integrationstest|
+#| Testet das gesamte System gegen die Anforderungen |Systemtest|
+#| Der Auftraggeber prüft, ob seine Anforderungen erfüllt sind |Abnahmetest|
 
 # ============================================================
 # Webshop-Komponenten (vereinfacht)
@@ -59,19 +66,23 @@ if __name__ == "__main__":
 
     # TODO: Test 1 – Normaler Einkauf ohne Rabatt
     # Erwartetes Ergebnis: 69.97
-    print("Test 1 – Kein Rabatt:")
-    # Dein Code hier
+    print("Test 1 – Kein Rabatt: ")
+    ergebnis1 = berechne_gesamtpreis(warenkorb_normal)
+    print(ergebnis1)
+
 
     # TODO: Test 2 – Einkauf mit 10 % Rabatt
     # Erwartetes Ergebnis: 62.97
     print("\nTest 2 – 10 % Rabatt:")
-    # Dein Code hier
+    ergebnis2 = berechne_gesamtpreis(warenkorb_normal, 10)
+    print(ergebnis2)
+
 
     # TODO: Test 3 – Leerer Warenkorb (Sonderfall)
     # Erwartetes Ergebnis: 0.0 (keine Exception!)
     print("\nTest 3 – Leerer Warenkorb:")
-    # Dein Code hier
-
+    ergebnis3 = berechne_gesamtpreis(warenkorb_leer)
+    print(ergebnis3)
 
 # ============================================================
 # Aufgabe 1 – Tabelle Teststufen (als Kommentar)

@@ -21,7 +21,7 @@ Teste dein Vorwissen mit dem Forms-Quiz:
 ## Selbsteinschätzung – Vorher
 
 - [ ] 🟢 Ich kenne die verschiedenen Testarten bereits
-- [ ] 🟡 Ich kenne manche Begriffe, aber nicht alle
+- [x] 🟡 Ich kenne manche Begriffe, aber nicht alle
 - [ ] 🔴 Das Thema ist mir neu
 
 ---
@@ -55,10 +55,10 @@ Lies die Beschreibungen und ordne sie den Teststufen zu.
 
 | Beschreibung | Teststufe |
 |-------------|-----------|
-| Testet einzelne Funktionen oder Methoden isoliert | |
-| Prüft das Zusammenspiel mehrerer Module | |
-| Testet das gesamte System gegen die Anforderungen | |
-| Der Auftraggeber prüft, ob seine Anforderungen erfüllt sind | |
+| Testet einzelne Funktionen oder Methoden isoliert |Unit-Test|
+| Prüft das Zusammenspiel mehrerer Module |Integrationstest|
+| Testet das gesamte System gegen die Anforderungen |Systemtest|
+| Der Auftraggeber prüft, ob seine Anforderungen erfüllt sind |Abnahmetest|
 
 **Teststufen:** Unit-Test · Integrationstest · Systemtest · Abnahmetest (User Acceptance Test)
 
@@ -78,10 +78,10 @@ Ein Team entwickelt einen einfachen Online-Webshop mit folgenden Komponenten:
 
 | Teststufe | Konkretes Testbeispiel |
 |-----------|----------------------|
-| Unit-Test | |
-| Integrationstest | |
-| Systemtest | |
-| Abnahmetest | |
+| Unit-Test |Prüfen, ob bei Eingaben bestimmter Werte der Preis immer korrekt berechnet wird|
+| Integrationstest |Prüfen, ob bestellprozess.py Kosten und Warenkorb übernimmt|
+| Systemtest |Artikel in den Warenkorb packen und bestellen|
+| Abnahmetest |Vom Kunden prüfen lassen|
 
 **b)** In `code/starter.py` findest du die Funktion `berechne_gesamtpreis()`.
 Schreibe einen einfachen manuellen Test (mit `print()`), der folgende Fälle prüft:
@@ -97,12 +97,12 @@ Ordne die folgenden Testszenarien zu:
 
 | Testszenario | Funktional | Nicht-funktional |
 |-------------|-----------|-----------------|
-| Login mit korrekten Zugangsdaten klappt | | |
-| Seite lädt in unter 2 Sekunden | | |
-| Bestellung wird korrekt in der Datenbank gespeichert | | |
-| System ist bei 1000 gleichzeitigen Nutzern stabil | | |
-| Passwort-Reset-Mail wird verschickt | | |
-| Alle Texte sind auf Deutsch (Lokalisierung) | | |
+| Login mit korrekten Zugangsdaten klappt |x| |
+| Seite lädt in unter 2 Sekunden | |x|
+| Bestellung wird korrekt in der Datenbank gespeichert |x| |
+| System ist bei 1000 gleichzeitigen Nutzern stabil | |x|
+| Passwort-Reset-Mail wird verschickt |x| |
+| Alle Texte sind auf Deutsch (Lokalisierung) | |x|
 
 ---
 
@@ -113,11 +113,13 @@ Dein Team hat den Rabattrechner aus Baustein 01 korrigiert.
 Jetzt soll eine neue Funktion "Mengenrabatt" (ab 10 Stück = 5 % extra Rabatt) hinzugefügt werden.
 
 **a)** Was ist ein Regressionstest? Erkläre mit eigenen Worten.
+    Programmteile die schon erfolgreich getestet wurden, werden nocheinmal getestet um zu prüfen, ob sie noch mit den Änderungen und Erweiterungen des Programms funktioniert.
 
 **b)** Welche bestehenden Tests müssten nach der Änderung als Regressionstests erneut ausgeführt werden? Liste mindestens 3 auf.
+    Unit-Test, Integrationstest, Systemtest
 
 **c)** Warum ist das automatisierte Ausführen von Regressionstests besonders wertvoll?
-
+    So ist der Zeitaufwand für das Testen viel geringer. Man kann sich auf das implementieren neuer Funktionen konzentrieren und wird automatisch informiert, wenn ein Regressionstest schief läuft.
 ---
 
 ## Aufgabe 5 – IHK-Stil 🟡
@@ -127,16 +129,20 @@ Jetzt soll eine neue Funktion "Mengenrabatt" (ab 10 Stück = 5 % extra Rabatt) h
 Ein Ausbildungsbetrieb entwickelt eine Zeiterfassungssoftware.
 Das Entwicklungsteam hat folgende Testmaßnahmen geplant:
 
-- Entwickler testen ihre eigenen Funktionen mit isolierten Tests
-- Anschließend werden die Module Zeiterfassung, Benutzerverwaltung und Auswertung gemeinsam getestet
-- Das HR-Team führt abschließend einen formalen Abnahmetest durch
+-a Entwickler testen ihre eigenen Funktionen mit isolierten Tests
+-b Anschließend werden die Module Zeiterfassung, Benutzerverwaltung und Auswertung gemeinsam getestet
+-c Das HR-Team führt abschließend einen formalen Abnahmetest durch
 
 **(a)** Ordnen Sie diese drei Maßnahmen den Teststufen im V-Modell zu. *(3 Punkte)*
+    a: Unit-Test
+    b: Integrationstest
+    c: Abnahmetest
 
 **(b)** Nennen Sie eine weitere Teststufe, die im Plan fehlt, und beschreiben Sie, was dort getestet werden sollte. *(3 Punkte)*
+    Systemtest: Das gesamte System muss in Bezug alle Anforderungen getestet werden.
 
 **(c)** Das HR-Team meldet beim Abnahmetest, dass Urlaubstage falsch berechnet werden. Auf welcher Teststufe hätte dieser Fehler idealerweise gefunden werden sollen? Begründen Sie. *(4 Punkte)*
-
+    Unit-Test: Je früher der Fehler gefunden wird, desto geringer ist der Aufwand zur Fehlerbehebung
 ---
 
 ## Aufgabe 6 – Transfer: Teststrategie analysieren 🔴
